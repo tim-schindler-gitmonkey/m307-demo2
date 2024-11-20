@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80.368" height="80.368" viewBox="0 0 80.368 80.368">
+  <defs>
+    <filter id="Pfad_18" x="0" y="0" width="80.368" height="80.368" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Komponente_15_1" data-name="Komponente 15 – 1" transform="translate(15 14)">
+    <g transform="matrix(1, 0, 0, 1, -15, -14)" filter="url(#Pfad_18)">
+      <path id="Pfad_18-2" data-name="Pfad 18" d="M25.184,0A25.184,25.184,0,1,1,0,25.184,25.184,25.184,0,0,1,25.184,0Z" transform="translate(15 14)" fill="#f4f4f4"/>
+    </g>
+    <g id="Gruppe_8" data-name="Gruppe 8" transform="translate(14.583 14.276)">
+      <line id="Linie_5" data-name="Linie 5" x2="21" transform="translate(0.417 6.724)" fill="none" stroke="#242424" stroke-linecap="round" stroke-width="1.5"/>
+      <line id="Linie_7" data-name="Linie 7" x2="21" transform="translate(0.417 14.724)" fill="none" stroke="#242424" stroke-linecap="round" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

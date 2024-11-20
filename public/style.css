@@ -1,9 +1,480 @@
 * {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header,
-footer {
-  background-color: lightblue;
-  padding: 12px;
+@font-face {
+  font-family: "Gotham";
+  src: url("uploads/Font/Gotham-Medium.otf") format("opentype");
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Kiro";
+  src: url("uploads/Font/Kiro\ Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Kiro", light;
+  src: url("uploads/Font/Kiro\ Light.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.6;
+  max-width: 480px;
+  margin: 0 auto;
+  background-color: #efefef;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h2 {
+  font-family: "Gotham", sans-serif;
+  font-weight: normal;
+  font-size: 17px;
+  color: #459bcb;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+header {
+  color: white;
+  padding: 20px 0 55px 0;
+}
+
+main {
+  max-width: 480px;
+  width: 100%;
+  background-color: white;
+  padding: 2.5rem;
+  margin: 20px 0;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 932px;
+}
+
+/* Label styles */
+form {
+  margin-top: 40px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Input styles */
+.input-line {
+  border: none;
+  border-bottom: 1.5px solid #e2e2e2;
+  border-radius: 0.8px;
+  width: 100%;
+  font-size: 24px;
+  font-weight: normal;
+  font-family: "Kiro";
+  padding-bottom: 15px;
+}
+
+#personal-infos {
+  width: 80%;
+}
+
+.input-line:focus {
+  border-bottom: 2px solid #e2e2e2;
+}
+
+.input-line::placeholder {
+  color: #242424;
+  opacity: 1;
+}
+
+.form-group {
+  margin-bottom: 45px;
+  position: relative;
+}
+
+.password-group {
+  position: relative;
+}
+/* Custom checkbox with SVG icons */
+.custom-checkbox {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.icon {
+  width: 28px;
+  height: auto;
+  display: none;
+}
+
+.unchecked-icon {
+  display: block;
+}
+
+.custom-checkbox input[type="checkbox"]:checked ~ .unchecked-icon {
+  display: none;
+}
+
+.custom-checkbox input[type="checkbox"]:checked ~ .checked-icon {
+  display: block;
+}
+
+/* Dropdown */
+
+.input-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: -39px;
+}
+
+.age-title {
+  font-weight: normal;
+  font-family: "Kiro";
+  font-weight: normal;
+  font-size: 24px;
+  color: #242424;
+  text-align: left;
+  margin: 0 0 0 15px;
+}
+
+.dropdown-box {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #909090;
+  border-radius: 5px;
+  padding: 10px;
+  height: 46px;
+  margin-left: 15px;
+}
+
+.dropdown-value {
+  font-size: 24px;
+  font-weight: normal;
+  font-family: "Kiro";
+  color: #242424;
+}
+
+.arrow {
+  font-size: 22px;
+  color: #242424;
+  cursor: pointer;
+  padding-left: 5px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border-radius: 0 0 5px 5px;
+  border: 1.5px solid #909090;
+  z-index: 1;
+  width: 75.5px;
+  top: 92%;
+  right: 0;
+  border-top: none;
+}
+
+.dropdown-content p {
+  padding: 5px 10px 0px 10px;
+  font-size: 24px;
+  font-weight: normal;
+  font-family: "Kiro";
+  cursor: pointer;
+  text-align: left;
+}
+
+.dropdown-content p:hover {
+  background-color: #f0f0f0;
+}
+
+.show {
+  display: block;
+}
+
+.register-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 160px;
+}
+
+.register-group h2 {
+  padding-left: 13px;
+  font-size: 24px;
+  font-weight: normal;
+  font-family: "Kiro";
+  color: black;
+}
+
+.register-group-2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+
+.register-group-2 h2 {
+  padding-left: 13px;
+  font-size: 24px;
+  font-weight: normal;
+  font-family: "Kiro";
+  color: black;
+}
+
+.line-container {
+  position: relative;
+  bottom: -60px;
+  margin-left: -2.5rem;
+  margin-right: -2.5rem;
+  width: calc(100% + 5rem);
+}
+
+.gray-line {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 15px;
+  background-color: #e2e2e2;
+}
+
+.blue-line {
+  position: absolute;
+  z-index: 1;
+  width: 50%;
+  height: 3px;
+  border-radius: 15px;
+  background-color: #459bcb;
+}
+
+/* Buttons */
+.login-button {
+  width: 100%;
+  height: 65px;
+  background-color: #459bcb;
+  color: white;
+  font-size: 22px;
+  font-weight: normal;
+  font-family: "Kiro";
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-button:hover {
+  background-color: #367ba0;
+  transform: scale(1.03);
+}
+
+.login-button:active {
+  background-color: #2a5f7f;
+}
+
+.register-link-2 {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  height: 65px;
+  background-color: #459bcb;
+  color: white;
+  font-size: 22px;
+  font-weight: normal;
+  font-family: "Kiro";
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  line-height: 65px;
+}
+
+.register-link-2:hover {
+  background-color: #367ba0;
+  transform: scale(1.03);
+}
+
+.register-link-2:active {
+  background-color: #2a5f7f;
+}
+
+.register-button {
+  width: 110px;
+  height: 53px;
+  background-color: #459bcb;
+  color: white;
+  font-size: 18px;
+  font-weight: normal;
+  font-family: "Kiro";
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.register-button:hover {
+  background-color: #367ba0;
+  transform: scale(1.03);
+}
+
+.register-button:active {
+  background-color: #2a5f7f;
+}
+
+.back-link {
+  position: absolute;
+  top: 90px;
+  left: 675px;
+  font-size: 30px;
+  color: #459bcb;
+  text-decoration: none;
+  z-index: 10;
+}
+
+.arrow-back-outline {
+  font-size: 30px;
+  color: #459bcb;
+}
+
+/* Profile Pic Upload */
+
+.upload-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.upload-button {
+  width: 100px;
+  height: 100px;
+  background-color: #459bcb;
+  border-radius: 50%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+.upload-button:hover {
+  background-color: #367ba0;
+}
+
+.line-container {
+  position: relative;
+  bottom: -60px;
+  margin-left: -2.5rem;
+  margin-right: -2.5rem;
+  width: calc(100% + 5rem);
+}
+
+.gray-line-full {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 15px;
+  background-color: #e2e2e2;
+}
+
+.blue-line-full {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 3px;
+  border-radius: 15px;
+  background-color: #459bcb;
+}
+
+.hide-button {
+  display: none;
+}
+
+.upload-button {
+  width: 165px;
+  height: 165px;
+  font-size: 80px;
+}
+
+.upload-text-box h2 {
+  font-size: 28px;
+  font-family: "Kiro";
+  font-weight: bold;
+  color: black;
+  margin: 0 0 2px 0;
+}
+
+.upload-text-box p {
+  font-size: 20px;
+  font-family: "Kiro";
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 103px;
+}
+
+.finish-button {
+  width: 200px;
+  height: 65px;
+  background-color: #459bcb;
+  color: white;
+  font-size: 24px;
+  font-weight: normal;
+  font-family: "Kiro";
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.finish-button:hover {
+  background-color: #367ba0;
+  transform: scale(1.03);
+}
+
+.finish-button:active {
+  background-color: #2a5f7f;
+}
+
+.camera-icon {
+  width: 80px;
+  height: auto;
 }

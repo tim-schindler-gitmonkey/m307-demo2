@@ -1,0 +1,139 @@
+<main>
+  <header class="header">
+    <img src="uploads/img/logo.svg" alt="logo" />
+    <h2>Die ofizielli BBZ Dating-Platform</h2>
+  </header>
+  <form>
+    <div class="form-group">
+      <input type="text" id="name" class="input-line" placeholder="Name" />
+    </div>
+
+    <div class="form-group password-group">
+      <input
+        type="password"
+        value=""
+        id="password"
+        required=""
+        class="input-line"
+        placeholder="Passwort"
+      />
+      <label for="toggle-password" class="custom-checkbox">
+        <input type="checkbox" id="toggle-password" onclick="myFunction()" />
+        <svg
+          class="icon unchecked-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="28.908"
+          height="24.375"
+          viewbox="0 0 28.908 24.375"
+        >
+          <g
+            id="Komponente_1_2"
+            data-name="Komponente 1 – 2"
+            transform="translate(0 0.354)"
+          >
+            <g
+              id="Icon_ion-ios-eye"
+              data-name="Icon ion-ios-eye"
+              transform="translate(-2.252 -5.332)"
+              opacity="0.5"
+            >
+              <path
+                id="Pfad_19"
+                data-name="Pfad 19"
+                d="M16.69,7.875c-5.188,0-9.278,3.265-14.169,8.6a1.02,1.02,0,0,0-.006,1.374c4.188,4.626,7.878,8.607,14.176,8.607,6.22,0,10.885-5.013,14.2-8.646a1.012,1.012,0,0,0,.032-1.336C27.543,12.379,22.865,7.875,16.69,7.875Zm.284,15.092a5.807,5.807,0,1,1,5.53-5.53,5.809,5.809,0,0,1-5.53,5.53Z"
+                fill="#242424"
+              />
+              <path
+                id="Pfad_20"
+                data-name="Pfad 20"
+                d="M17.63,14.6a3.032,3.032,0,0,1,.2-1.09c-.065,0-.129-.006-.2-.006a4.129,4.129,0,1,0,4.129,4.129c0-.084-.006-.168-.006-.252a2.861,2.861,0,0,1-1.174.252A3,3,0,0,1,17.63,14.6Z"
+                fill="#242424"
+              />
+            </g>
+            <rect
+              id="Rechteck_10"
+              width="2"
+              height="32"
+              rx="1"
+              transform="matrix(0.695, -0.719, 0.719, 0.695, 2.25, 1.439)"
+              fill="#909090"
+              stroke="#fff"
+              stroke-width="0.5"
+            />
+          </g>
+        </svg>
+        <svg
+          class="icon checked-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="28.908"
+          height="18.582"
+          viewbox="0 0 28.908 18.582"
+        >
+          <g
+            id="Icon_ion-ios-eye-2"
+            transform="translate(-2.252 -7.875)"
+            opacity="0.5"
+          >
+            <path
+              id="Pfad_191"
+              data-name="Pfad 19"
+              d="M16.69,7.875c-5.188,0-9.278,3.265-14.169,8.6a1.02,1.02,0,0,0-.006,1.374c4.188,4.626,7.878,8.607,14.176,8.607,6.22,0,10.885-5.013,14.2-8.646a1.012,1.012,0,0,0,.032-1.336C27.543,12.379,22.865,7.875,16.69,7.875Zm.284,15.092a5.807,5.807,0,1,1,5.53-5.53,5.809,5.809,0,0,1-5.53,5.53Z"
+              fill="#242424"
+            />
+            <path
+              id="Pfad_201"
+              data-name="Pfad 20"
+              d="M17.63,14.6a3.032,3.032,0,0,1,.2-1.09c-.065,0-.129-.006-.2-.006a4.129,4.129,0,1,0,4.129,4.129c0-.084-.006-.168-.006-.252a2.861,2.861,0,0,1-1.174.252A3,3,0,0,1,17.63,14.6Z"
+              transform="translate(-0.926 -0.463)"
+              fill="#242424"
+            />
+          </g>
+        </svg>
+      </label>
+    </div>
+
+    <div class="form-group personal-info-group">
+      <div class="input-container">
+        <input
+          type="text"
+          id="personal-infos"
+          required=""
+          class="input-line"
+          placeholder="Hobbys / Inträssä"
+        />
+
+        <div class="dropdown">
+          <h2 class="age-title">Auter</h2>
+          <div class="dropdown-box" onclick="toggleDropdown()">
+            <span class="dropdown-value">16</span>
+            <ion-icon name="chevron-down-outline" class="arrow"></ion-icon>
+          </div>
+
+          <div class="dropdown-content" id="dropdown-content">
+            <p onclick="selectAge(this)">17</p>
+            <p onclick="selectAge(this)">18</p>
+            <p onclick="selectAge(this)">19</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="/register-pfp" class="button login-button register-link-2">
+      Registrierä
+    </a>
+  </form>
+  <div class="register-group-2">
+    <h2>Hesch scho es login?</h2>
+    <a href="/login" class="register-link">
+      <button class="button register-button" type="button">Login</button>
+    </a>
+  </div>
+  <div class="line-container">
+    <div class="blue-line"></div>
+    <div class="gray-line"></div>
+  </div>
+</main>
+<script>
+  function toggleDropdown() { var dropdownContent =
+  document.getElementById('dropdown-content');
+  dropdownContent.classList.toggle('show'); }
+</script>

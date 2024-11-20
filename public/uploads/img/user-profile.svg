@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="94.684" height="94.684" viewBox="0 0 94.684 94.684">
+  <defs>
+    <filter id="Ellipse_8" x="0" y="0" width="94.684" height="94.684" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Gruppe_15" data-name="Gruppe 15" transform="translate(-333.658 -45.191)">
+    <g transform="matrix(1, 0, 0, 1, 333.66, 45.19)" filter="url(#Ellipse_8)">
+      <circle id="Ellipse_8-2" data-name="Ellipse 8" cx="32.342" cy="32.342" r="32.342" transform="translate(15 13)" fill="#459bcb"/>
+    </g>
+    <path id="Icon_material-person" data-name="Icon material-person" d="M23.583,23.583a8.791,8.791,0,1,0-8.791-8.791A8.789,8.789,0,0,0,23.583,23.583Zm0,4.4C17.715,27.978,6,30.924,6,36.77v4.4H41.165v-4.4C41.165,30.924,29.451,27.978,23.583,27.978Z" transform="translate(357.417 66.95)" fill="#fff"/>
+  </g>
+</svg>
