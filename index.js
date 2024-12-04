@@ -1,24 +1,26 @@
+import bcrypt from "bcrypt";
+
 import { createApp, upload } from "./config.js";
 
 const app = createApp({
-  user: "autumn_star_7622",
+  user: "still_breeze_2546",
   host: "bbz.cloud",
-  database: "demo",
-  password: "uaioysdfjoysfdf",
+  database: "still_breeze_2546",
+  password: "78762e243c46f33b20a1821bf4e5ab1f",
   port: 30211,
 });
 
 /* Startseite */
 app.get("/", async function (req, res) {
+  if (!req.session.userid) {
+    res.redirect("/login");
+    return;
+  }
   res.render("start", {});
 });
 
 app.get("/impressum", async function (req, res) {
   res.render("impressum", {});
-});
-
-app.get("/register", async function (req, res) {
-  res.render("register", {});
 });
 
 app.get("/register-pfp", async function (req, res) {
