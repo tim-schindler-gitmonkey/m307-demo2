@@ -47,7 +47,6 @@ export function createApp(dbconfig) {
         if (error) {
           console.log(error);
         }
-        res.redirect("/login");
       }
     );
   });
