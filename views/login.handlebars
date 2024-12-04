@@ -3,13 +3,20 @@
     <img src="uploads/img/logo.svg" alt="logo" />
     <h2>Die ofizielli BBZ Dating-Platform</h2>
   </header>
-  <form>
+  <form action="/login" method="POST">
     <div class="form-group">
-      <input type="text" id="name" class="input-line" placeholder="Name" />
+      <input
+        name="name"
+        type="text"
+        id="name"
+        class="input-line"
+        placeholder="Name"
+      />
     </div>
 
     <div class="form-group password-group">
       <input
+        name="passwort"
         type="password"
         value=""
         id="password"

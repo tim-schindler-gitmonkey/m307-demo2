@@ -1,3 +1,5 @@
+import bcrypt from "bcrypt";
+
 import { createApp, upload } from "./config.js";
 
 const app = createApp({
@@ -10,15 +12,15 @@ const app = createApp({
 
 /* Startseite */
 app.get("/", async function (req, res) {
+  if (!req.session.userid) {
+    res.redirect("/login");
+    return;
+  }
   res.render("start", {});
 });
 
 app.get("/impressum", async function (req, res) {
   res.render("impressum", {});
-});
-
-app.get("/register", async function (req, res) {
-  res.render("register", {});
 });
 
 app.get("/register-pfp", async function (req, res) {

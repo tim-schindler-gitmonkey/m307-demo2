@@ -66,7 +66,7 @@ export function createApp(dbconfig) {
         }
         if (
           result.rows.length > 0 &&
-          bcrypt.compareSync(req.body.password, result.rows[0].passwort)
+          bcrypt.compareSync(req.body.passwort, result.rows[0].passwort)
         ) {
           req.session.userid = result.rows[0].id;
           res.redirect("/");
