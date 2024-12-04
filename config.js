@@ -38,7 +38,7 @@ export function createApp(dbconfig) {
   });
 
   app.post("/register", function (req, res) {
-    var password = bcrypt.hashSync(req.body.password, 10);
+    var password = bcrypt.hashSync(req.body.passwort, 10);
 
     pool.query(
       "INSERT INTO users (name, passwort, hobbies, age) VALUES ($1, $2, $3, $4)",
@@ -71,7 +71,6 @@ export function createApp(dbconfig) {
           req.session.userid = result.rows[0].id;
           res.redirect("/");
         } else {
-          res.redirect("/login");
         }
       }
     );

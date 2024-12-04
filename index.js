@@ -3,10 +3,10 @@ import bcrypt from "bcrypt";
 import { createApp, upload } from "./config.js";
 
 const app = createApp({
-  user: "autumn_star_7622",
+  user: "still_breeze_2546",
   host: "bbz.cloud",
-  database: "demo",
-  password: "uaioysdfjoysfdf",
+  database: "still_breeze_2546",
+  password: "78762e243c46f33b20a1821bf4e5ab1f",
   port: 30211,
 });
 
@@ -27,14 +27,13 @@ app.get("/register-pfp", async function (req, res) {
   res.render("register-pfp", {});
 });
 
-function myFunction() {
-  var x = document.getElementById("password");
-  if (x.type === "password") {
-    x.type = "text";
-  } else {
-    x.type = "password";
-  }
-}
+//Upload Formular
+app.post("/main-page", upload.single("image"), async function (req, res) {
+  await app.locals.pool.query("INSERT INTO uploads (image) VALUES ($1)", [
+    req.file.filename,
+  ]);
+  res.redirect("/");
+});
 
 /* Wichtig! Diese Zeilen müssen immer am Schluss der Website stehen! */
 app.listen(3010, () => {
