@@ -55,6 +55,13 @@ export function createApp(dbconfig) {
     res.render("login");
   });
 
+  app.post("/main-page", upload.single("image"), async function (req, res) {
+    await app.locals.pool.query("INSERT INTO posts (image) VALUES ($1)", [
+      req.file.filename,
+    ]);
+    res.redirect("/");
+  });
+
   app.post("/login", function (req, res) {
     pool.query(
       "SELECT * FROM users WHERE name = $1",

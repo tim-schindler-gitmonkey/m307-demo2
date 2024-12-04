@@ -23,10 +23,6 @@ app.get("/impressum", async function (req, res) {
   res.render("impressum", {});
 });
 
-app.get("/register", async function (req, res) {
-  res.render("register", {});
-});
-
 app.get("/register-pfp", async function (req, res) {
   res.render("register-pfp", {});
 });
