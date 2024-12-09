@@ -27,12 +27,18 @@ app.get("/register-pfp", async function (req, res) {
   res.render("register-pfp", {});
 });
 
-//Upload Formular
+app.get("/main-page", async function (req, res) {
+  res.render("main-page", {});
+});
+
+//Upload
+
 app.post("/main-page", upload.single("image"), async function (req, res) {
-  await app.locals.pool.query("INSERT INTO uploads (image) VALUES ($1)", [
-    req.file.filename,
-  ]);
-  res.redirect("/");
+  await app.locals.pool.query(
+    "INSERT INTO users (name, image) VALUES ($1, $2)",
+    [req.body.name, req.file.filename]
+  );
+  res.redirect("/main-page");
 });
 
 /* Wichtig! Diese Zeilen müssen immer am Schluss der Website stehen! */
